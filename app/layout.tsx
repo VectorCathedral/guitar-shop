@@ -1,47 +1,34 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono, Bangers } from 'next/font/google'
-import { CartProvider } from '@/components/cart-provider'
+import { Archivo, Bangers, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import { CartProvider } from '@/components/cart-provider'
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
+const archivo = Archivo({
+  variable: '--font-archivo',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+})
+const bangers = Bangers({
+  variable: '--font-bangers',
+  subsets: ['latin'],
+  weight: '400',
+})
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 })
-const bangers = Bangers({
-  variable: '--font-anton',
-  weight: '400',
-  subsets: ['latin'],
-})
 
 export const metadata: Metadata = {
-  title: 'AMP CITY — Electric Guitars From Another Dimension',
+  title: 'WEB-SLINGER AXES — Multiverse Electric Guitars',
   description:
-    'Shop electric guitars in every style. Strats, Les Pauls, Flying Vs and more — built loud, built bold.',
+    'Electric guitars from across the multiverse. Comic-book built, dimension-tested. Shred in any reality.',
   generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#1a0a2e',
+  colorScheme: 'light',
+  themeColor: '#e23b2e',
 }
 
 export default function RootLayout({
@@ -52,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${bangers.variable} bg-background`}
+      className={`${archivo.variable} ${bangers.variable} ${geistMono.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         <CartProvider>{children}</CartProvider>
