@@ -65,23 +65,34 @@ export default async function ProductPage({
 
         <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2">
           {/* Image */}
-          <div className="relative">
-            <div className="relative aspect-square -rotate-1 overflow-hidden border-[3px] border-border bg-card halftone-cyan comic-shadow">
-              <Image
-                src={guitar.image || '/placeholder.svg'}
-                alt={`${guitar.name} electric guitar`}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain p-6"
-              />
-              {guitar.badge && (
-                <span className="absolute left-4 top-4 -rotate-3 border-[3px] border-border bg-primary px-3 py-1 font-display text-lg tracking-wide text-primary-foreground">
-                  {guitar.badge}
-                </span>
-              )}
-            </div>
-          </div>
+          <div className="flex flex-col gap-4">
+  <div className="relative aspect-square -rotate-1 overflow-hidden border-[3px] border-border bg-card comic-shadow">
+    <Image
+      src={guitar.image || "/placeholder.svg"}
+      alt={`${guitar.name} electric guitar`}
+      fill
+      priority
+      sizes="(max-width: 1024px) 100vw, 50vw"
+      className="object-contain p-6"
+    />
+
+    {guitar.badge && (
+      <span className="absolute left-4 top-4 -rotate-3 border-[3px] border-border bg-primary px-3 py-1 font-display text-lg tracking-wide text-primary-foreground">
+        {guitar.badge}
+      </span>
+    )}
+  </div>
+
+  <iframe
+    src={guitar.spotifyEmbed}
+    width="100%"
+    height="152"
+    style={{ borderRadius: "12px" }}
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  />
+</div>
 
           {/* Details */}
           <div className="flex flex-col gap-5">
