@@ -27,7 +27,7 @@ export function ProductCard({ guitar }: { guitar: Guitar }) {
           {guitar.badge}
         </span>
       )}
-   <div className="relative aspect-square overflow-hidden border-b-[3px] border-border halftone-cyan">
+   <div className="relative aspect-square overflow-hidden border-b-[3px] border-border bg-white">
         <Image
           src={guitar.image || '/placeholder.svg'}
           alt={`${guitar.name} electric guitar`}
