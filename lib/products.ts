@@ -10,6 +10,7 @@ export type Guitar = {
   scale: string
   accent: 'red' | 'cyan' | 'yellow'
   image: string
+  spotifyEmbed: string
   description: string
   specs: { label: string; value: string }[]
   badge?: string
@@ -28,6 +29,7 @@ export const guitars: Guitar[] = [
     scale: '25.5"',
     accent: 'red',
     image: '/guitars/arachnid.png',
+    spotifyEmbed: "https://open.spotify.com/embed/track/3th89PlDwtE7GHz7GD67rz?utm_source=generator",
     badge: 'BEST SELLER',
     description:
       'The guitar that started it all. A blazing red body wrapped in cobalt web-lines, tuned for tone that swings between dimensions. Built for players who never miss a beat — or a leap.',
@@ -52,6 +54,8 @@ export const guitars: Guitar[] = [
     scale: '24.75"',
     accent: 'cyan',
     image: '/guitars/venom.png',
+    spotifyEmbed: "https://open.spotify.com/embed/track/0sU8jSH3MZaBIXAzhQNMuT?utm_source=generator",
+
     description:
       'A glossy black beast with toxic-teal symbiote drip oozing across the body. Thick, snarling humbuckers deliver a low-end that consumes everything in the room.',
     specs: [
@@ -75,6 +79,8 @@ export const guitars: Guitar[] = [
     scale: '25.5"',
     accent: 'cyan',
     image: '/guitars/gwen.png',
+    spotifyEmbed: "https://open.spotify.com/embed/track/0WoFs3EdGOx58yX5BtXvOa?utm_source=generator",
+
     badge: 'NEW DROP',
     description:
       'Equal parts ballet and basement show. Teal and hot-pink offset body with chiming single-coils that cut through any mix. Light, fast, and unapologetically loud.',
@@ -99,6 +105,9 @@ export const guitars: Guitar[] = [
     scale: '24.75"',
     accent: 'yellow',
     image: '/guitars/noir.png',
+    spotifyEmbed: "https://open.spotify.com/embed/track/73ABUTIRGYBQ76FzV2w57Y?utm_source=generator",
+
+
     description:
       'Straight out of a 1930s detective story. A monochrome single-cut with growling P-90s that drips with dramatic, high-contrast attitude. Every note casts a long shadow.',
     specs: [
@@ -122,6 +131,8 @@ export const guitars: Guitar[] = [
     scale: '25.5"',
     accent: 'yellow',
     image: '/guitars/sun-spider.png',
+    spotifyEmbed: "https://open.spotify.com/embed/track/3zEN0ii6s4DHHBpnTp3RP7?utm_source=generator",
+
     description:
       'Pure radiant energy in a Flying-V shape. Yellow-to-orange sunburst body with high-output humbuckers that scream like a supernova. Impossible to ignore on any stage.',
     specs: [
@@ -145,6 +156,8 @@ export const guitars: Guitar[] = [
     scale: '24.75"',
     accent: 'red',
     image: '/guitars/miles.png',
+    spotifyEmbed: "https://open.spotify.com/embed/track/62nQ8UZVqR2RMvkJHkcO2o?utm_source=generator",
+
     badge: 'LIMITED',
     description:
       'Matte black with bright red spray-paint accents — the sound of the next generation. Aggressive dual-horn body and punchy humbuckers built for players writing their own story.',
