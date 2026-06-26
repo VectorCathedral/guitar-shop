@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono, Anton } from 'next/font/google'
+import { Geist, Geist_Mono, Bangers } from 'next/font/google'
+import { CartProvider } from '@/components/cart-provider'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -8,16 +9,16 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 })
-const anton = Anton({
+const bangers = Bangers({
   variable: '--font-anton',
   weight: '400',
   subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
-  title: 'TOUCHLINE — Authentic Football Jerseys',
+  title: 'AMP CITY — Electric Guitars From Another Dimension',
   description:
-    'Shop authentic club and national team football jerseys. Built for the game, made for the fans.',
+    'Shop electric guitars in every style. Strats, Les Pauls, Flying Vs and more — built loud, built bold.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -39,11 +40,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  colorScheme: 'dark',
+  themeColor: '#1a0a2e',
 }
 
 export default function RootLayout({
@@ -54,10 +52,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} bg-background`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bangers.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        {children}
+        <CartProvider>{children}</CartProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
