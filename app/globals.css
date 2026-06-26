@@ -108,6 +108,51 @@
 
 @layer utilities {
   /* halftone ben-day dot texture */
+@keyframes floatGlow {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.15);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.universe-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.universe-bg::before,
+.universe-bg::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: .35;
+  animation: floatGlow 14s ease-in-out infinite;
+}
+
+.universe-bg::before {
+  top: -150px;
+  left: -120px;
+  background: var(--glow-primary);
+}
+
+.universe-bg::after {
+  bottom: -180px;
+  right: -120px;
+  background: var(--glow-secondary);
+  animation-delay: -7s;
+}
+  
   .halftone {
     background-image: radial-gradient(
       var(--ink) 1.4px,
