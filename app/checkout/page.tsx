@@ -13,7 +13,7 @@ export default function CheckoutPage() {
     <div className="flex min-h-dvh flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <section className="relative overflow-hidden border-b-[3px] border-border bg-ink text-ink-foreground">
+        <section className="relative overflow-hidden border-b-[3px] border-border bg-white text-ink-foreground">
           <div className="halftone pointer-events-none absolute inset-0 opacity-[0.12]" />
           <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6">
             <h1 className="font-display text-5xl uppercase tracking-wide sm:text-6xl">
