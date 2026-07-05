@@ -156,7 +156,7 @@ export const guitars: Guitar[] = [
     scale: '24.75"',
     accent: 'red',
     image: '/guitars/miles.png',
-    spotifyEmbed: "https://open.spotify.com/embed/track/62nQ8UZVqR2RMvkJHkcO2o?utm_source=generator",
+    spotifyEmbed: "https://open.spotify.com/embed/track/5IOW5kQxAWmdcJfdRCbwM8?utm_source=generator",
 
     badge: 'LIMITED',
     description:
